@@ -40,3 +40,13 @@ $docker restart name/ID
 - Cerebro 源码 https://github.com/lmenezes/cerebro
 - 一个开源的 ELK（Elasticsearch + Logstash + Kibana） docker-compose 配置 https://github.com/deviantony/docker-elk
 - Install Elasticsearch with Docker https://www.elastic.co/guide/en/elasticsearch/reference/7.2/docker.html
+
+
+#### 地址
+- kibana：localhost:5601
+- cerebro:localhost:9000
+
+#### Windows下环境处理
+`wsl -d docker-desktop` : 进入wsl（windows子系统下）的docker-desktop系统
+`sysctl -w vm.max_map_count=262144` 在docker-desktop系统下执行es内存设置
+在host里面配置127.0.0.1       elasticsearch；否则会抛出不到host异常
